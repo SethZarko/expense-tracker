@@ -43,7 +43,7 @@ export const AddTransaction = ({ month, year }) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8000/api/transactions/create", {
+      const response = await fetch("https://expense-tracker-api-wi0m.onrender.com/api/transactions/create", {
         method: "POST",
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,

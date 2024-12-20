@@ -21,7 +21,7 @@ export const Register = () => {
     setErrors(null);
 
     try {
-      const response = await fetch('http://localhost:8000/api/users/create', {
+      const response = await fetch('https://expense-tracker-api-wi0m.onrender.com/api/users/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

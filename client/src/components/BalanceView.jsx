@@ -34,7 +34,7 @@ export const BalanceView = ({ month, year }) => {
       try {
         // Replace with your actual API endpoint
         const response = await fetch(
-          `http://localhost:8000/api/transactions/all/${year}/${monthNumber}`,{
+          `https://expense-tracker-api-wi0m.onrender.com/api/transactions/all/${year}/${monthNumber}`,{
             method: 'GET',
             headers: {
               'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -103,7 +103,7 @@ export const BalanceView = ({ month, year }) => {
   const handleDelete = async (transactionId) => {
     try {
       const response = await fetch(
-        `http://localhost:8000/api/transactions/${transactionId}`,
+        `https://expense-tracker-api-wi0m.onrender.com/api/transactions/${transactionId}`,
         {
           method: "DELETE",
           headers: {

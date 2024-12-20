@@ -1,6 +1,7 @@
 import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
+import { corsOptions } from './utilities/corsOptions.js'
 
 import connectDb from './database/database.js'
 
@@ -21,7 +22,7 @@ connectDb()
 // Middleware
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(cors())
+app.use(cors(corsOptions))
 
 // Routes
 app.use('/api/transactions', transactionRoutes)

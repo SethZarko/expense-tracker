@@ -34,7 +34,7 @@ export const Calendar = () => {
   useEffect(() => {
     const handleFetch = async () => {
       const response = await fetch(
-        `http://localhost:8000/api/transactions/all/${year}`, {
+        `https://expense-tracker-api-wi0m.onrender.com/api/transactions/all/${year}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`,
